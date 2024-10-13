@@ -16,13 +16,7 @@ function Player(){
     });
 
 
-    const options = {
-        method: 'GET',
-        headers: {
-          accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNjE1NDMxZGJmOGI3ODUyZmExNDZkNTA2MDM0NDQzNiIsIm5iZiI6MTcyODExNDQ5MC4zMTM1ODYsInN1YiI6IjY2ZWMyZTAyNjJjNGJiMThjOTc0YTc5YyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KY7RoRNy5KH-EXjRsFt7yiskB1gHRVYP-KDt6f1xWT8'
-        }
-      };
+    
 
       useEffect(()=>{
         fetch(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`, options)
