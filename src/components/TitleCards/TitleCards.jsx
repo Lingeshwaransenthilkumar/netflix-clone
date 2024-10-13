@@ -10,13 +10,7 @@ const TitleCards = ({title,category}) => {
   const cardsRef = useRef();
   const [apiData,setApidata] = useState([]);
   // api data
-  const options ={
-    method: 'GET',
-    headers:{
-      accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNjE1NDMxZGJmOGI3ODUyZmExNDZkNTA2MDM0NDQzNiIsIm5iZiI6MTcyNjc1NTA2NS42NDg1MSwic3ViIjoiNjZlYzJlMDI2MmM0YmIxOGM5NzRhNzljIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.7KLCLQY_g_Y5LMfE4vzKmocCoEevECKzzuP2g5rT0wY'
-    }
-  }
+  
   fetch(`https://api.themoviedb.org/3/movie/${category ? category : "now_playing"}?language=en-US&page=1`,options)
   .then(response => response.json())
   .then(response => setApidata(response.results))
