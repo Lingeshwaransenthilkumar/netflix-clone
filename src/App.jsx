@@ -9,7 +9,7 @@ function App(){
       <div>
         <Routes>
           {/* Home page route */}
-          <Route path="/" element={<Home/>}/>
+          <Route path="/netflix-clone" element={<Home/>}/>
           <Route path="/Login" element={<Login/>}/>
           <Route path="/player/:id" element={<Player/>}/>
           <Route path="/player/home" element={<HomePlayer/>}/>
